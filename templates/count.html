@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <title>Count</title>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h3>Count</h3>
+        <h5>Lenght : {{count}}</h5>
+        <a href="{%url 'home'%}" class="btn btn-warning">Try Again</a>
+        <br>
+        <p>This is your Text : "{{ fulltext }}" </p>
+
+        <hr>
+        {% for word, total in sorted %}
+            <b>{{word}}</b> : {{total}}
+            <br/>
+        {% endfor %}
+    </div>
+</body>
+</html>
